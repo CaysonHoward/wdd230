@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#main-body {
+    max-width: 760px;
+    background-color: #F4E9CD;
+    margin: 0 auto;
+    color: #252422;
+}
+
+header {
+    background-color: #031926;
+    display: grid;
+    place-items: center;
+    grid-template: auto / 200px auto;
+    color: #fffcf2;
+    border-radius: 15px 15px 0 0;
+    margin-top: 30px;
+}
+
+#main-photo {
+    margin: 20px;
+    border-radius: 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    padding: 4px 16px;
+    margin: 10px 8px 0 0;
+    background-color: #468189;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #252422;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+main {
+    display: grid;
+    grid-template: auto auto auto auto / auto;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.card {
+    background-color: #468189;
+    margin: 0 0 16px 0;
+    padding: 0 16px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    background-color: #77ACA2;
+    color: #252422;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.card p {
+    text-align: center;
+}
+
+footer {
+    background-color: #031926;
+    color: #fffcf2;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+}
