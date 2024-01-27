@@ -60,6 +60,7 @@ main h2 {
     background-color: #468189;
     margin: 0 0 16px 0;
     border-radius: 10px;
+    padding-bottom: .5rem;
 }
 
 .card h3 {
