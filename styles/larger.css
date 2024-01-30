@@ -1,6 +1,17 @@
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 700px) {
     nav{
         display: grid;
         grid-template: auto / auto auto auto auto auto;
-    } 
+    }
+
+    /*This code is used to display the hamburger menu and switch the symbol back and fort*/
+    .menu{
+        display: none;
+    }
+    .show{
+        display: contents !important;
+    }
+    .hamburger-menu{
+        display: contents;
+    }
 }

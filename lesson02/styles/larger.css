@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+    main{
+        display: grid;
+        grid-template: auto / auto auto ;
+    }
+}
+@media screen and (max-width: 600px) {
+    main{
+        display: grid;
+        grid-template: auto / auto auto auto;
+        
+    }
+}

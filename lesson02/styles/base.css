@@ -7,7 +7,7 @@
 }
 
 #main-body {
-    max-width: 760px;
+    max-width: 900px;
     background-color: #F4E9CD;
     margin: 0 auto;
     color: #252422;
@@ -17,59 +17,26 @@ header {
     background-color: #031926;
     display: grid;
     place-items: center;
-    grid-template: auto / 200px auto 40px;
     color: #fffcf2;
     border-radius: 15px 15px 0 0;
     margin-top: 30px;
-}
-.hamburger-menu{
-    display: none;
-    font-size: 30px;
-}
-
-#main-photo {
-    margin: 20px;
-    border-radius: 20px;
 }
 
 header h1 {
     text-align: center;
 }
 
-nav {
+main{
     display: grid;
-    grid-template: auto auto auto auto / auto;
-}
-
-nav a {
-    display: block;
-    text-align: center;
-    padding: 4px 16px;
-    margin: 10px 8px 0 0;
-    background-color: #468189;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #252422;
-}
-
-nav a:hover {
-    color: #ffffff;
-}
-
-main {
-    display: grid;
-    grid-template: auto auto auto auto auto / auto;
-}
-
-main h2 {
-    text-align: center;
-}
+    grid-template: auto auto auto / auto;
+    
+} 
 
 .card {
-    background-color: #468189;
-    margin: 0 0 16px 0;
+    text-align: center;
+    background-color: #5fa1aa;
     border-radius: 10px;
-    padding-bottom: 1rem;
+    margin: 1rem;
 }
 
 .card h3 {
@@ -78,14 +45,11 @@ main h2 {
     text-align: center;
     padding: 0.3rem;
     border-radius: 10px;
+    margin: 0;
 }
 
 .card p {
     text-align: center;
-}
-
-.location-frame{
-    align-self: center;
 }
 
 footer {

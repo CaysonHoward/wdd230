@@ -21,15 +21,19 @@
     <link rel="icon" href="favicon.ico">
 
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/openmenu.js" defer></script>
 </head>
 
 <body id="main-body">
     <header>
         <img id="main-photo" src="images/cayson_howard_photo.jpg" alt="Photo of Cayson Howard">
         <h1>Cayson Howard</h1>
+        <div>
+            <div class="hamburger-menu">&#9776;</div>
+        </div>
     </header>
 
-    <nav>
+    <nav class="menu">
         <a href="#">Home</a>
         <a href="lesson03/chamber-site-plan.html">Site Plan</a>
         <a href="chamber/">Chamber</a>
@@ -50,6 +54,13 @@
             <p>Page Visits: 77</p>
         </section>
     </main>
+    <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        src="https://www.google.com/maps?sca_esv=a5d739ec3717dc50&output=search&q=rexburg+idaho&source=lnms&entry=mc"
+        class="location-frame">
+    </iframe>
 
     <footer>
         <p>© <span id="copyrightYear"></span> | Cayson Howard | Rexburg, ID</p>
