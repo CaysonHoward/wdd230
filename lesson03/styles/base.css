@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Oswald:wght@300&display=swap');
+
+body {
+    background-color: #0b2c6c;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-family: 'Oswald', sans-serif;
+}
+#content {
+    background-color: white;
+    padding: 40px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 7px;
+}
+h1 {
+    font-size: 2em;
+    padding: 20px;
+    
+}
+h2 {
+    font-size: 1.5em;
+    padding: 5px;
+    margin: 10px
+}
+h3{
+    padding: 5px;
+    margin: 20px;
+}
+h1, h2 {
+    background-color: #65a8d2;
+}
+p {
+    line-height: 1.5em;
+}
+p, .jura {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial, Helvetica, sans-serif;
+}
+p, ol {
+    margin-left: 6em;
+    margin-right: 6em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial, Helvetica;
+}
+ol li {
+    line-height: 1.5em;
+}
+.logo {
+    width: 190px;
+    padding-bottom: 50px;
+}
+.pri, .sec, .acc1, .acc2, .acc3 {
+    margin: 40px 0 15px 0;
+}
+ol {
+    list-style-type: none;
+  }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.pri {
+    background-color: #0b2c6c;
+    color: white;
+}
+.sec {
+    background-color: #65a8d2 ;
+}
+.acc1 {
+   background-color: #0b6c4c;
+}
+.acc2 {
+    background-color: #f7f7f7;
+}
+.acc3 {
+    background-color: #000000;
+    color: white;
+}
+.sitemap {
+    width: 100%;
+}
+#topo {
+    height: 100vh;
+}
+section a {
+    font-size: 1.5em;
+    color:#8F6B60;
+    font-family: Basic, 
+}
+footer {
+    padding-top: 30px;
+}
