@@ -49,6 +49,10 @@ ol li {
     width: 190px;
     padding-bottom: 50px;
 }
+.wireframe{
+    width: 400px;
+    align-self: center;
+}
 .pri, .sec, .acc1, .acc2, .acc3 {
     margin: 40px 0 15px 0;
 }
