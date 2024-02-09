@@ -50,8 +50,9 @@ ol li {
 }
 
 .logo {
-    width: 190px;
-    padding-bottom: 50px;
+    width: 120px;
+    height: 120px;
+    padding: 0 0 20px 50px;
 }
 
 .pri, .sec, .acc1, .acc2, .acc3 {
@@ -140,8 +141,14 @@ section a {
 .card h3 {
     margin: 0;
 }
+.card img{
+    padding: 10px;
+}
 .card:hover{
     background-color: #5ba48e;
+}
+.hr{
+    border: 1px solid lightgray;
 }
 footer {
     padding-top: 30px;
@@ -158,5 +165,9 @@ footer {
 
     nav ul.show {
         display: block;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
