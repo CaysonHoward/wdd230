@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Oswald:wght@300&display=swap');
+
+body {
+    background-color: #0b2c6c;
+    text-align: center;
+    font-family: 'Oswald', sans-serif; /* Using Oswald font */
+}
+
+#content {
+    background-color: white;
+    padding: 30px;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 7px;
+}
+
+h1 {
+    font-size: 2em;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial, Helvetica, sans-serif;
+    background-color: #65a8d2;
+}
+
+ol, ul {
+    text-align: left;
+}
+
+p {
+    line-height: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial, Helvetica, sans-serif;
+}
+
+ol, p {
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+ol li {
+    line-height: 1.5em;
+}
+
+.logo {
+    width: 190px;
+    padding-bottom: 50px;
+}
+
+.pri, .sec, .acc1, .acc2, .acc3 {
+    margin: 40px 0 15px 0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+nav ul {
+    padding-inline-start: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: #65a8d2;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 3px 7px 10px #888888;
+}
+
+nav li {
+    padding: 20px 60px 20px 60px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav li:hover {
+    background-color: #0b6c4c;
+}
+
+.persona {
+    overflow: hidden;
+    height: 200px;
+    clip: rect(0px,60px,200px,0px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.sitemap {
+    width: 100%;
+}
+
+#topo {
+    height: 100vh;
+}
+
+section a {
+    font-size: 1.5em;
+    color:#8F6B60;
+    font-family: Basic, 
+}
+
+footer {
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+}
