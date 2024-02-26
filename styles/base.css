@@ -10,7 +10,7 @@
     max-width: 760px;
     background-color: #F4E9CD;
     margin: 0 auto;
-    color: #252422;
+    color: #000000;
 }
 
 header {
@@ -44,16 +44,48 @@ nav {
 nav a {
     display: block;
     text-align: center;
-    padding: 4px 16px;
+    padding: 4px;
     margin: 10px 8px 0 0;
     background-color: #468189;
     border-radius: 8px;
     text-decoration: none;
-    color: #252422;
+    color: #000000;
 }
 
 nav a:hover {
     color: #ffffff;
+}
+
+.hero {
+	position: relative;
+	border: 1px solid rgba(0,0,0,.1);
+	height: 300px;
+}
+
+.hero img {
+    padding-top: 20px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    z-index: 1;
+}
+.herolabel {
+    position: absolute;
+    top: 460px;
+    left: 170px;
+    padding: 1.5rem;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.75;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.herolabel p {
+    margin: 0;
+    padding: .25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Great Vibes", serif;
 }
 
 main {
@@ -74,7 +106,7 @@ main h2 {
 
 .card h3 {
     background-color: #77ACA2;
-    color: #252422;
+    color: #000000;
     text-align: center;
     padding: 0.3rem;
     border-radius: 10px;

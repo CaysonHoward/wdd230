@@ -7,11 +7,12 @@
     <meta name="author" content="Cayson Howard">
     <meta name="description"
         content="This site is the assignment portal for all of Cayson Howard's assignments for the WDD 230.">
-    <meta property="og:title" content="WDD 230 Assignment Portal" >
-    <meta property="og:type" content="Website" >
-    <meta property="og:url" content="https://caysonhoward.github.io/wdd230/" >
-    <meta property="og:image" content="https://treasurevalleydave.com/wp-content/uploads/2022/07/living-in-new-plymouth-id-by-treasure-valley-dave-1.jpg" >
-    
+    <meta property="og:title" content="WDD 230 Assignment Portal">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="https://caysonhoward.github.io/wdd230/">
+    <meta property="og:image"
+        content="https://treasurevalleydave.com/wp-content/uploads/2022/07/living-in-new-plymouth-id-by-treasure-valley-dave-1.jpg">
+
     <title>Cayson Howard - WDD 230 - Web Frontend Development</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
@@ -26,7 +27,7 @@
 
 <body id="main-body">
     <header>
-        <img id="main-photo" src="images/cayson_howard_photo.jpg" alt="Photo of Cayson Howard">
+        <img id="main-photo" src="images/cayson_howard_photo.webp" alt="Photo of Cayson Howard">
         <h1>Cayson Howard</h1>
         <div>
             <div class="hamburger-menu">&#9776;</div>
@@ -38,10 +39,18 @@
         <a href="lesson03/chamber-site-plan.html">Site Plan</a>
         <a href="chamber/">Chamber</a>
         <a href="https://byui.edu" target="_blank">BYU-Idaho</a>
-        <a href=""
-            target="_blank">Scripture</a>
+        <a href="" target="_blank">Scripture</a>
     </nav>
-
+    <div>
+        <div class="herolabel">
+            <p>Meridian Temple</p>
+        </div>
+        <picture class="hero">
+            <source srcset="images/hero-small.webp" media="(max-width:500px)">
+            <source srcset="images/hero-small.webp" media="(max-width:960px)">
+            <img src="images/hero-large.webp" alt="favorite temple" width="760">
+        </picture>
+    </div>
     <main>
         <h2>WDD 230: Web Frontend Development</h2>
         <section class="card">
@@ -54,10 +63,7 @@
             <p>Page Visits: 77</p>
         </section>
     </main>
-    <iframe
-        width="600"
-        height="450"
-        style="border:0"
+    <iframe width="600" height="450" style="border:0"
         src="https://www.google.com/maps?sca_esv=a5d739ec3717dc50&output=search&q=rexburg+idaho&source=lnms&entry=mc"
         class="location-frame">
     </iframe>
