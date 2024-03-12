@@ -2,5 +2,8 @@
     background-color: #28648a;
 }
 .darkBackground{
+    .btn {
+        color: #3004fb;
+    }
     background-color: #9f9f9f !important;
 }
