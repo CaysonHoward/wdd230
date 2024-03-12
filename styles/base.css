@@ -62,6 +62,10 @@ nav a:hover {
 	height: 300px;
 }
 
+.heroimg{
+    position: relative;
+}
+
 .hero img {
     padding-top: 20px;
 	width: 100%;
@@ -71,8 +75,8 @@ nav a:hover {
 }
 .herolabel {
     position: absolute;
-    top: 460px;
-    left: 170px;
+    top: 75px;
+    left: 50px;
     padding: 1.5rem;
     box-shadow: 0 0 3rem #fff;
     opacity: 0.75;
