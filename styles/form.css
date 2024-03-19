@@ -1,0 +1,62 @@
+:root {
+    --primary-color: #007bff;
+    --border-color: #ced4da;
+    --font-family: Arial, sans-serif;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-family);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input[type="range"] {
+    width: calc(100% - 40px); /* Adjust for the range value display width */
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade of primary color on hover */
+  }
+  
+  #rating_value {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.form-padding{
+    margin: 30px;
+}

@@ -16,6 +16,7 @@
     <title>Cayson Howard - WDD 230 - Web Frontend Development</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
@@ -23,7 +24,6 @@
 
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/openmenu.js" defer></script>
-    <script src="scripts/localstorage.js" defer></script>
 </head>
 
 <body id="main-body">
@@ -34,45 +34,40 @@
             <div class="hamburger-menu">&#9776;</div>
         </div>
     </header>
-
     <nav class="menu">
         <a href="#">Home</a>
         <a href="lesson03/chamber-site-plan.html">Site Plan</a>
         <a href="chamber/">Chamber</a>
         <a href="https://byui.edu" target="_blank">BYU-Idaho</a>
-        <a href="" target="_blank">Scripture</a>
+        <a href="form.html" target="_blank">Login Form</a>
     </nav>
-    <div class="heroimg">
-        <div class="herolabel">
-            <p>Meridian Temple</p>
+
+    <form class="form-padding">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
         </div>
-        <picture class="hero">
-            <source srcset="images/hero-small.webp" media="(max-width:500px)">
-            <source srcset="images/hero-small.webp" media="(max-width:960px)">
-            <img src="images/hero-large.webp" alt="favorite temple" width="760">
-        </picture>
-    </div>
-    <main>
-        <h2>WDD 230: Web Frontend Development</h2>
-        <section class="card">
-            <h3>Learning Activities</h3>
-            <nav class="menu">
-                <a href="lesson05/bom.html">Lesson 5: Book of Mormon Favorite Chapters</a>
-                <a href="lesson08/form.html">Lesson 8: Forms</a>
-                <a href="lesson09/prophets.html">Lesson 9: Prophets API</a>
-            </nav>
-        </section>
-        <section class="card">
-            <h3>Information</h3>
-            <p>Rexburg</p>
-            <p>Cold</p>
-            <p><span class="label">Number of Visits: </span><span class="visits">
-        </section>
-    </main>
-    <iframe width="600" height="450" style="border:0"
-        src="https://www.google.com/maps?sca_esv=a5d739ec3717dc50&output=search&q=rexburg+idaho&source=lnms&entry=mc"
-        class="location-frame">
-    </iframe>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" title="Password must be at least 8 characters long and alphanumeric" required>
+        </div>
+        <div>
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" title="Passwords must match" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@byui\.edu$" title="A valid byui.edu email address." required>
+        </div>
+        <div>
+          <label for="page_rating">Page Rating:</label>
+          <input type="range" id="page_rating" name="page_rating" min="1" max="10" step="1" oninput="document.getElementById('rating_value').textContent = this.value;">
+          <span id="rating_value">1</span>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
 
     <footer>
         <p>© <span id="copyrightYear"></span> | Cayson Howard | Rexburg, ID</p>

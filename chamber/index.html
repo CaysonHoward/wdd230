@@ -14,18 +14,20 @@
     <meta property="og:image" content="image-url">
     <meta property="og:url" content="website-url">
 
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.ico">
 
     <link href="https://fonts.googleapis.com/css2?family=Basic:wght@400&family=Lora:wght@400;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/medium.css">
 
     <link rel="stylesheet" href="styles/dark.css">
 
     <script src="scripts/openMenu.js" defer></script>
+    <script src="scripts/windchill.js" defer></script>
     <script src="scripts/toggleDark.js" defer></script>
 </head>
 
@@ -54,14 +56,22 @@
 
         <main>
             <div class="hero">
-                <img alt="Placeholder">
-            </div>
-
-            <section class="cta">
-                <h2>Join the Chamber of Commerce</h2>
-                <p>Learn about the benefits of becoming a member and how to join.</p>
-                <a href="#" class="btn">Join Now</a>
-            </section>
+                <div class="image-container">
+                  <picture>
+                    <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                    <source srcset="images/hero-medium.webp" media="(max-width: 1200px)">
+                    <img src="images/hero-large.webp" alt="New Plymouth Sign" width="1300" height="750">
+                  </picture>
+                  <section class="cta">
+                    <div class="cta-content">
+                      <h2>Join the Chamber of Commerce</h2>
+                      <p>Learn about the benefits of becoming a member and how to join.</p>
+                      <a href="#" class="btn">Join Now</a>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              
 
             <section class="events">
                 <h2>Current Events</h2>
@@ -111,8 +121,17 @@
                 <h2>Weather</h2>
                 <hr>
                 <div>
-                    <section class="card">
-                        <h3>10 Day weather</h3>
+                    <section class="temp">
+                        <div>
+                            <label for="temperature">Temperature (°F):</label>
+                            <input type="number" id="temperature">
+                        </div>
+                        <div>
+                            <label for="windSpeed">Wind Speed (mph):</label>
+                            <input type="number" id="windSpeed">
+                        </div>
+                        <button onclick="calculateWindChill()">Calculate Wind Chill</button>
+                        <div id="result"></div>
                     </section>
                 </div>
             </section>
