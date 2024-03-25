@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image-url">
+    <meta property="og:url" content="https://caysonhoward.github.io/wdd230/chamber/">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <link rel="stylesheet" href="styles/dark.css">
+    <script src="scripts/openMenu.js" defer></script>
+
+    <script src="scripts/discover.js"></script>
+
+    <title>New Plymouth Chamber of Commerce</title>
+</head>
+<body id="top">
+    <label class="switch">
+        <input type="checkbox" onclick="toggleDark()">
+        <span class="slider round"></span>
+      </label>
+    <div id="content">
+    <header>
+        <div class="title">
+            <img class="logo" src="images/newplymouthlogo.png" alt="siteLogo">
+            <h1>New Plymouth Chamber of Commerce</h1>
+            <button class="nav-toggle">☰</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discovery</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="discover_main">
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery1.jpg" alt="weather image">
+            <figcaption>Enjoy New Plymouths famous water wheels!</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery2.jpg" alt="weather image">
+            <figcaption>Partake in beautiful sunsets</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery3.jpg" alt="weather image">
+            <figcaption>Beautiful during every Season</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery4.jpg" alt="weather image">
+            <figcaption>Fishing Community</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery5.jpg" alt="weather image">
+            <figcaption>Public Parks</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery6.jpg" alt="weather image">
+            <figcaption>Star Gazing</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery7.jpg" alt="weather image">
+            <figcaption>View the tractor parade every year!</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery8.jpg" alt="weather image">
+            <figcaption>Greenery and Golf</figcaption>
+        </figure>
+        <figure>
+            <img class='gallery' src="http://dummyimage.com/780x520/ccc/fff" data-src="images/gallery9.jpg" alt="weather image">
+            <figcaption>Amazing Landscapes and views</figcaption>
+        </figure>
+    </main>
+    <h1 id="days">Days since last visited: <span id='diff'></span></h1>
+
+    <footer>
+        <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
+    </footer>
+</body>
+</html>

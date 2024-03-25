@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image-url">
+    <meta property="og:url" content="https://caysonhoward.github.io/wdd230/chamber/">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/dark.css">
+
+    <script src="scripts/openMenu.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+
+    <script src="scripts/directory.js"></script>
+
+    <title>New Plymouth Chamber of Commerce</title>
+</head>
+<body id="top">
+    <label class="switch">
+        <input type="checkbox" onclick="toggleDark()">
+        <span class="slider round"></span>
+      </label>
+    <div id="content">
+        <header>
+            <div class="title">
+                <img class="logo" src="images/newplymouthlogo.png" alt="siteLogo">
+                <h1>New Plymouth Chamber of Commerce</h1>
+                <button class="nav-toggle">☰</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="discover.html">Discovery</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="directory">
+            <div class="icons">
+                <button id="grid">&#9783</button>
+                <button id="list">&#9868</button>
+            </div>
+            <div class="displayItems">
+            <div class="cards"></div>
+            <table class="table"></table>
+        </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
+        </footer>
+</body>
+</html>
