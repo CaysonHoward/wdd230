@@ -1,6 +1,6 @@
 const url = new URL(window.location);
 const formData = url.searchParams;
-const linksURL = "https://auzfest.github.io/Bountiful-Foods/data/fruits.json";
+const linksURL = "https://caysonhoward.github.io/wdd230/bountifulfoods/data/fruits.json";
 const nutrition = document.querySelector('.nutrition');
 const orderDate = document.querySelector('#orderDate');
 const readyDate = document.querySelector('#readyDate');

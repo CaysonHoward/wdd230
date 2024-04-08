@@ -11,7 +11,7 @@ document.getElementById('fruitForm').onsubmit = function(event) {
     return true; 
 };
 
-const linksURL = "https://auzfest.github.io/Bountiful-Foods/data/fruits.json";
+const linksURL = "https://caysonhoward.github.io/wdd230/bountifulfoods/data/fruits.json";
 const fruitContainer = document.querySelector('#fruitContainer');
 
 async function getFruit() {
