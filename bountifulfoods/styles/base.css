@@ -1,0 +1,18 @@
+.weather {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 4%;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 0 12px -5px #6D5B5F;
+}
+.weatherCard {
+    box-shadow: 0 0 14px -2px #6D5B5F;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
