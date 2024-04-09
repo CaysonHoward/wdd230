@@ -1,6 +1,9 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('nav ul');
+document.addEventListener('DOMContentLoaded', function() {
+    var openMenuButton = document.getElementById('open-menu');
+    var menu = document.getElementById('menu');
 
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+
+    openMenuButton.addEventListener('click', function() {
+        menu.classList.toggle('show');
+    });
 });

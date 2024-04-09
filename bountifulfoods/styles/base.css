@@ -23,6 +23,7 @@
     flex-direction: column;
     align-items: center;
   }
+
 .locationscontainer {
     display: flex;
     justify-content: space-between;
@@ -46,15 +47,24 @@ max-width: 100%;
   background-color: white;
   border-radius: 20px;
 }
+
 form {
   width: 80%;
   max-width: 500px;
 }
+
 #fruitContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Create columns with minimum width of 150px */
   grid-gap: 10px; /* Adjust the gap between grid items */
 }
+
 .orderconf{
   text-align: center;
+}
+#open-menu{
+  display: none;
+}
+.images img{
+  max-width: 100%;
 }

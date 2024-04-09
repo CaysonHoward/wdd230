@@ -7,50 +7,41 @@ document.getElementById('fruitForm').onsubmit = function(event) {
         return false;
     }
     document.getElementById('error-message').textContent = ''; 
-    incrementDrinkCount();
+    addOrderedDrink();
     return true; 
 };
 
-const linksURL = "https://caysonhoward.github.io/wdd230/bountifulfoods/data/fruits.json";
+const infoURL = "https://caysonhoward.github.io/wdd230/bountifulfoods/data/fruits.json";
 const fruitContainer = document.querySelector('#fruitContainer');
 
-async function getFruit() {
-  const response = await fetch(linksURL);
+async function displayFruit() {
+  const response = await fetch(infoURL);
   const data = await response.json();
-  displayFruit(data);
+  addFruit(data);
 }
 
-function displayFruit(data) {
+function addFruit(data) {
   data.forEach(fruit => {
-    const fruitLabel = document.createElement('label');
-    const fruitInput = document.createElement('input');
+    const label = document.createElement('label');
+    const input = document.createElement('input');
 
-    // Set attributes for the checkbox
-    fruitInput.setAttribute("type", "checkbox");
-    fruitInput.setAttribute("id", fruit.id);
-    fruitInput.setAttribute("name", "fruit");
-    fruitInput.setAttribute("value", fruit.name);
-    
-    // Create a div to wrap input and label, making it easier to manage in grid
+    input.setAttribute("type", "checkbox");
+    input.setAttribute("id", fruit.id);
+    input.setAttribute("name", "fruit");
+    input.setAttribute("value", fruit.name);
+    label.setAttribute('for', fruit.id);
+    label.textContent = fruit.name;
     const fruitDiv = document.createElement('div');
-
-    // Append input to the wrapper div
-    fruitDiv.append(fruitInput);
-
-    // Set label attributes and append it to the wrapper div
-    fruitLabel.setAttribute('for', fruit.id);
-    fruitLabel.textContent = fruit.name;
-    fruitDiv.append(fruitLabel);
-
-    // Append the wrapper div to the fruitContainer, each acting as a grid item
+    fruitDiv.append(input);
+    fruitDiv.append(label);
     fruitContainer.append(fruitDiv);
   });
 }
 
     // Increment and save the new count to Local Storage
-function incrementDrinkCount() {
+function addOrderedDrink() {
   let count = parseInt(localStorage.getItem('drinkCount') || 0);
   localStorage.setItem('drinkCount', ++count);
 }
 
-getFruit();
+displayFruit();

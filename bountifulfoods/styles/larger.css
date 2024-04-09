@@ -1,0 +1,44 @@
+@media screen and (max-width: 1000px) {
+    #open-menu{
+        box-shadow: 0 0 14px -2px #6D5B5F;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: white;
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+    }
+
+    .show{
+        display: contents !important;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #orderbuttonholder{
+        display: none;
+    }
+
+    .column {
+        flex-basis: calc(100% - 10px);
+    }
+
+    .threecol{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .locationscontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    
+}

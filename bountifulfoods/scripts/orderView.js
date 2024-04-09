@@ -4,6 +4,8 @@ const linksURL = "https://caysonhoward.github.io/wdd230/bountifulfoods/data/frui
 const nutrition = document.querySelector('.nutrition');
 const orderDate = document.querySelector('#orderDate');
 const readyDate = document.querySelector('#readyDate');
+const date = new Date();
+const futureDate = new Date(date.getTime() + 60 * 60000);
 
 let totalCalories = 0;
 let totalCarbs = 0;
@@ -11,97 +13,90 @@ let totalProtein = 0;
 let totalFat = 0;
 let TotalSugar = 0;
 
-function formatDate(date) {
+document.querySelector("#firstName").textContent = formData.get('firstName');
+document.querySelector("#email").textContent = formData.get('email');
+document.querySelector("#phone").textContent = formData.get('phone');
+
+const fruits = formData.getAll('fruit');
+document.querySelector("#fruit").textContent = fruits.join(', ');
+
+document.querySelector("#spInstructions").textContent = formData.get('specialInstructions');
+
+function customDateFormat(date) {
     const options = {
-        year: 'numeric', month: 'numeric', day: 'numeric',
-        hour: '2-digit', minute: '2-digit',
-        hour12: true // Use hour12 to specify 12-hour format; set to false for 24-hour format
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
     };
-    return date.toLocaleString('en-US', options);}
+    return date.toLocaleString('en-US', options);
+}
 
-const date = new Date(); // Get the current date and time
-const futureDate = new Date(date.getTime() + 30 * 60000); // Add 30 minutes to the current time
-
-// Format the dates for display
-const formattedCurrentDate = formatDate(date);
-const formattedFutureDate = formatDate(futureDate);
-
-orderDate.textContent = `Time of Order: ${formattedCurrentDate}`;
-readyDate.textContent = `Estimated To Be Ready By: ${formattedFutureDate}`;
+orderDate.textContent = `Time of Order: ${customDateFormat(date)}`;
+readyDate.textContent = `Estimated To Be Ready By: ${customDateFormat(futureDate)}`;
 
 async function getFruit() {
     const response = await fetch(linksURL);
     const data = await response.json();
-    displayFruitNutrition(data)
+    displayFruitInfo(data)
 }
 
-async function displayFruitNutrition(data) {
+async function displayFruitInfo(data) {
     const fruits = formData.getAll('fruit');
 
     fruits.forEach(selectedFruit => {
-        const fruitDetails = data.find(fruit => fruit.name.toLowerCase() === selectedFruit.toLowerCase());
-        if (fruitDetails) {
-            calculateNutrition(fruitDetails);
-        } else {
-        console.log(`Nutrition information for ${selectedFruit} not found.`);
-        }
+        const fruitInfo = data.find(fruit => fruit.name.toLowerCase() === selectedFruit.toLowerCase());
+        calculateFruitInfo(fruitInfo);
     });
     displayNutrition();
 
 }
 
-function calculateNutrition(fruitDetails) {
-    let calories = fruitDetails.nutritions.calories;
-    totalCalories += calories;
+function calculateFruitInfo(fruitInfo) {
+    totalCalories += fruitInfo.nutritions.calories;
 
-    let carbs = fruitDetails.nutritions.carbohydrates;
-    totalCarbs += carbs;
+    totalCarbs += fruitInfo.nutritions.carbohydrates;
 
-    let protein = fruitDetails.nutritions.protein;
-    totalProtein += protein;
+    totalProtein += fruitInfo.nutritions.protein;
 
-    let fat = fruitDetails.nutritions.fat;
-    totalFat += fat;
+    totalFat += fruitInfo.nutritions.fat;
 
-    let sugar = fruitDetails.nutritions.sugar;
-    TotalSugar += sugar;
+    TotalSugar += fruitInfo.nutritions.sugar;
 }
 
 function displayNutrition() {
+    const caltext = `Calories: ${totalCalories.toFixed(1)}`;
+    const carbtext = `Carbs: ${totalCarbs.toFixed(1)}`;
+    const proteintext = `Protein: ${totalProtein.toFixed(1)}`;
+    const fattext = `Fat: ${totalFat.toFixed(1)}`;
+    const sugartext = `Sugar: ${TotalSugar.toFixed(1)}`;
+
+
     const container = document.createElement('div');
-    const p = document.createElement('p');
-    p.textContent = `Calories: ${totalCalories.toFixed(1)}`;
-    container.appendChild(p);        
+    const calories = document.createElement('p');
+    const carb = document.createElement('p');
+    const protein = document.createElement('p');
+    const fat = document.createElement('p');
+    const sugar = document.createElement('p');
 
-    const p2 = document.createElement('p');
-    p2.textContent =`Carbs: ${totalCarbs.toFixed(1)}`;
-    container.appendChild(p2);        
+    calories.textContent = caltext;
+    carb.textContent = carbtext
+    protein.textContent = proteintext;
+    fat.textContent = fattext;
+    sugar.textContent = sugartext;
 
-    const p3 = document.createElement('p');
-    p3.textContent =`Protein: ${totalProtein.toFixed(1)}`;
-    container.appendChild(p3);        
-
-    const p4 = document.createElement('p');
-    p4.textContent =`Fat: ${totalFat.toFixed(1)}`;
-    container.appendChild(p4);        
-
-    const p5 = document.createElement('p');
-    p5.textContent =`Sugar: ${TotalSugar.toFixed(1)}`;
-    container.appendChild(p5);        
+    container.appendChild(calories);        
+    container.appendChild(carb);        
+    container.appendChild(protein);        
+    container.appendChild(fat);        
+    container.appendChild(sugar);        
     nutrition.append(container);
 
 
 }
 
 getFruit();
-
-document.querySelector("#firstName").textContent = formData.get('firstName');
-document.querySelector("#email").textContent = formData.get('email');
-document.querySelector("#phone").textContent = formData.get('phone');
-
-
-const fruits = formData.getAll('fruit');
-document.querySelector("#fruit").textContent = fruits.join(', ');
-
-
-document.querySelector("#spInstructions").textContent = formData.get('specialInstructions');

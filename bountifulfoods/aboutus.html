@@ -13,41 +13,72 @@
   <title>Bountiful Foods</title>
 
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="nav-container">
-        <ul>
-          <li><a href="./index.html" class="largetext">Bountiful Foods</a></li>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./orderdrink.html">Order</a></li>
-          <li><a href="./aboutus.html">About</a></li>
-        </ul>
-        <ul>
-          <a href="./orderdrink.html"><button class="calltoactionbutton">Order Now</button></a>              
-        </ul>
-      </div>
-    </nav>
-</header>
+<p id="open-menu" class="card orderconf">Open Menu</p>
+    <header>
+        <nav id="menu">
+            <div class="nav-container">
+              <ul>
+                <li><a href="./index.html" class="largetext">Bountiful Foods</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./orderdrink.html">Order</a></li>
+                <li><a href="./aboutus.html">About</a></li>
+              </ul>
+              <ul id="orderbuttonholder">
+                <a href="./orderdrink.html"><button class="calltoactionbutton">Order Now</button></a>
+              </ul>
+            </div>
+          </nav>
+    </header>
   <main>
-    <section>
+    <section class="card">
       <h2>Our Company</h2>
-      <p>Insert historical information about the company here.</p>
-      <!-- Medium resolution image -->
-      <img class="image" srcset="company-medium.jpg 800w, company-small.jpg 400w" sizes="(max-width: 800px) 100vw, 50vw" src="company-medium.jpg" alt="Company">
+      <p class="centered">Welcome to 'Bountiful Foods,' 
+        where every sip is a journey to flavor paradise! 
+        Nestled in the heart of the bustling city streets, our vibrant food truck brings a burst of freshness to your day. 
+        At 'Bountiful Foods,' we pride ourselves on crafting the most luscious and nutritious smoothies from an array of handpicked, 
+        locally-sourced fruits and vegetables. From the zesty tang of tropical mango to the creamy richness of ripe avocado, 
+        each blend is a harmonious symphony of flavors, designed to invigorate your senses and fuel your day. 
+        Whether you're a health enthusiast, a busy commuter, or simply seeking a refreshing treat, our friendly team is here to whip
+        up your perfect concoction. Join us on a journey of taste sensations, and let 'Bountiful Foods' be your ultimate destination 
+        for guilt-free indulgence!</p>
+      <div class="centered">
+        <picture class="images">
+          <source srcset="images/company-small.webp" media="(max-width:500px)">
+          <source srcset="images/company-medium.webp" media="(max-width:960px)">
+          <img src="images/company-large.webp" alt="favorite temple" width="760">
+      </picture>
+      
+      </div>
     </section>
-    <section>
+    <div class="space"></div>
+    <section class="card">
       <h2>Our Area</h2>
-      <p>Insert historical information about the area here.</p>
-      <!-- Small resolution image -->
-      <img class="image" srcset="area-small.jpg 400w, area-tiny.jpg 200w" sizes="(max-width: 400px) 100vw, 50vw" src="area-small.jpg" alt="Area">
+      <p class="centered">
+        Carlsbad is a city near San Diego, in California. 
+        It's known for Tamarack Surf Beach, backed by the Carlsbad Sea Wall, and secluded South Carlsbad State Beach. 
+        The Legoland California theme park includes rides, a water park and the SEA LIFE Aquarium. 
+        The Flower Fields is a seasonal attraction, with acres of flowers. 
+        Set in a canyon, the Leo Carrillo Ranch Historic Park is home to free-roaming peacocks</p>
+      <div class="centered">
+        <picture class="images">
+          <source srcset="images/area-small.webp" media="(max-width:500px)">
+          <source srcset="images/area-medium.webp" media="(max-width:960px)">
+          <img src="images/area-large.webp" alt="favorite temple" width="760">
+      </picture>
+      </div>
     </section>
-    <section>
+    <div class="space"></div>
+    <section class="card">
       <h2>Location</h2>
-      <p>Here is a Google Map of Carlsbad, California:</p>
-      <!-- Google Map embed code -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53464.3907676715!2d-117.3290015495547!3d33.12158465701472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc73453f3bee59%3A0xa4cb5592fcf65d2f!2sCarlsbad%2C%20CA!5e0!3m2!1sen!2sus!4v1711993442320!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="centered">Carlsbad, California:</p>
+      <div class="centered">
+        <iframe class="centered" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53464.3907676715!2d-117.3290015495547!3d33.12158465701472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc73453f3bee59%3A0xa4cb5592fcf65d2f!2sCarlsbad%2C%20CA!5e0!3m2!1sen!2sus!4v1711993442320!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
   </main>
   <footer>
@@ -55,12 +86,15 @@
         <h3>Resources & Attribution</h3>
         <p>Images provided by <a href="https://www.fruityvice.com" target="_blank">Fruityvice</a>.</p>
         <p>Weather data provided by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a>.</p>
+        <p>More images from <a href="https://www.hotels.com/go/usa/us-best-things-to-do-carlsbad#:~:text=Carlsbad%20is%20known%20for%20its,on%20a%20rented%20electric%20scooter." target="_blank">hotels.com/</a>.</p>
+        <p>Extra images generated by <a href="https://pixlr.com/image-generator/" target="_blank">pixlr.com</a>.</p>
+        <p id="lastModified"></p>
     </div>
     <div class="column">
-      <h3>Connect With Us</h3>
-      <p><a href="https://twitter.com/example" target="_blank">Twitter</a></p>
-      <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
-      <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
+        <h3>Connect With Us</h3>
+        <p><a href="https://twitter.com/example" target="_blank">Twitter</a></p>
+        <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
+        <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
     </div>
     <div class="column">
         <h3>Contact Information</h3>
@@ -68,7 +102,8 @@
         <p>Phone: +1 (123) 456-7890</p>
         <p>Address: 123 Main St, Carlsbad, CA, 92008</p>
     </div>
-    <div id="lastModified"></div>
 </footer>
 </body>
+<script src="scripts/lastModified.js"></script>
+<script src="scripts/openMenu.js"></script>
 </html>
