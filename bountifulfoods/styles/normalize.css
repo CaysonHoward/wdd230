@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Oswald:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
 
 body {
     background-color: #f2f4f8;
@@ -12,6 +11,12 @@ nav {
     background-color: white;
     overflow: hidden;
 }
+
+h1, h2, h3{
+    text-align: center;
+    margin: 5px;
+}
+
     
 .nav-container {
     padding: 5px;
@@ -113,4 +118,21 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
     }
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    width: 80%;
+    margin: auto;
+}
+.space{
+    margin: 10px;
+    padding: 10px
+}
+.centered{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
 }

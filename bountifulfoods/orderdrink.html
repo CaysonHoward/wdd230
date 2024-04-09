@@ -14,6 +14,7 @@
     <title>Bountiful Foods</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 
 <body>
@@ -33,37 +34,65 @@
 </header>
 
     <main>
-        <div class="spacer"></div>
-        <form action="orderconf.html" method="get" id="fruitForm">
-            <div>
+      <div class="container">
+        <div class="formcontainer">
+          <form action="orderconf.html" method="get" id="fruitForm">
+
+            <div class="centered">
               <label for="firstName">First Name:</label>
+            </div>
+
+            <div class="centered">
               <input type="text" id="firstName" name="firstName" required>
             </div>
-            <div>
+
+            <div class="centered">
               <label for="email">Email:</label>
+            </div>
+
+            <div class="centered">
               <input type="email" id="email" name="email" title="A valid email address.">
             </div>
-            <div>
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" name="phone" title="A valid phone number">
-              </div>
-            <br>
-            <label>Select at least 3 fruits for you drink:<br></label>              
-            <br>
-            <div id="fruitContainer">
+
+            <div class="centered">
+              <label for="phone">Phone Number:</label>
             </div>
-            <div>
-                <label for="spInstructions">Special Instructions:</label>
-                <input type="text" id="spInstructions" name="specialInstructions" title="Any extra instructions">
+
+            <div class="centered">
+              <input type="text" id="phone" name="phone" title="A valid phone number">
             </div>
-            <p>NOTE: payment will be recieved upon pick up</p>
+
+            <br>
+
+            <label class="centered">Select at least 3 fruits for your drink:<br></label>
+
+            <br>
+            <div id="fruitContainer" class="centered">
+            </div>
+
+            <div class="space"></div>
+
+            <div class="centered">
+              <label for="spInstructions">Special Instructions:</label>
+            </div>
+
+            <div class="centered">
+              <input type="text" id="spInstructions" name="specialInstructions" title="Any extra instructions">
+            </div>
+
+            <div class="centered">
+              <p>NOTE: payment will be received upon pick up</p>
+            </div>
+
             <div id="error-message" style="color: red;"></div>
-            <div>
+
+            <div class="centered">
               <button id="submitbutton" type="submit">Submit Order</button>
             </div>
+
           </form>
-          <div class="spacer"></div>
-          <div class="spacer"></div>
+        </div>
+      </div>
     </main>
     <footer>
         <div class="column">
@@ -72,11 +101,11 @@
             <p>Weather data provided by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a>.</p>
         </div>
         <div class="column">
-            <h3>Connect With Us</h3>
-            <a href="https://twitter.com/example" target="_blank">Twitter</a>
-            <a href="https://facebook.com/example" target="_blank">Facebook</a>
-            <a href="https://instagram.com/example" target="_blank">Instagram</a>
-        </div>
+          <h3>Connect With Us</h3>
+          <p><a href="https://twitter.com/example" target="_blank">Twitter</a></p>
+          <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
+          <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
+      </div>
         <div class="column">
             <h3>Contact Information</h3>
             <p>Email: info@example.com</p>

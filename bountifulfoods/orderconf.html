@@ -14,6 +14,8 @@
   <title>Bountiful Foods</title>
 
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+
 </head>
 
 <body>
@@ -32,24 +34,23 @@
       </nav>
 </header>
 
-    <main>
-      <div class="spacer"></div>
-      <h2>Order Recieved!</h2>
-      <p id="orderDate"></p>
-      <p id="readyDate"></p>
-      <p>We appreciate your business! You will pay on pick up.<br>Leave us a review on <a href="https://facebook.com">social media!</a></p><br>
-      <h3>Confirmation:</h3>
-      <div class="confirminfo">
-          <p>Name: <span id="firstName"></span></p>
-          <p>Email: <span id="email"></span></p>
-          <p>Phone Number: <span id="phone"></span></p>
-          <p>Fruit Selected: <span id="fruit"></span></p>
-          <p>Total Nutrition:</p>
-          <div class="nutrition"></div>
-          <p>Special Instructions: <span id="spInstructions"></span></p>
-      </div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
+    <main class="orderconf">
+        <h2>Order Recieved!</h2>
+        <hr>
+        <p id="orderDate"></p>
+        <p id="readyDate"></p>
+        <p>We appreciate your business! You will pay on pick up.<br>Leave us a review on <a href="https://facebook.com">social media!</a></p><br>
+        <h3>Confirmation:</h3>
+        <hr>
+        <div class="confirminfo">
+            <p>Name: <span id="firstName"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Phone Number: <span id="phone"></span></p>
+            <p>Fruit Selected: <span id="fruit"></span></p>
+            <p>Total Nutrition:</p>
+            <div class="nutrition"></div>
+            <p>Special Instructions: <span id="spInstructions"></span></p>
+        </div>
     </main>
     <footer>
       <div class="column">
@@ -58,11 +59,11 @@
           <p>Weather data provided by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a>.</p>
       </div>
       <div class="column">
-          <h3>Connect With Us</h3>
-          <a href="https://twitter.com/example" target="_blank">Twitter</a>
-          <a href="https://facebook.com/example" target="_blank">Facebook</a>
-          <a href="https://instagram.com/example" target="_blank">Instagram</a>
-      </div>
+        <h3>Connect With Us</h3>
+        <p><a href="https://twitter.com/example" target="_blank">Twitter</a></p>
+        <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
+        <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
+    </div>
       <div class="column">
           <h3>Contact Information</h3>
           <p>Email: info@example.com</p>

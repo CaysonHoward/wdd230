@@ -35,7 +35,7 @@ async function apiFetch() {
   
       // Update HTML for each forecast
       const forecastElement = document.createElement('div');
-      forecastElement.classList.add('weatherCard')
+      forecastElement.classList.add('card')
       forecastElement.innerHTML = `<img src=${iconfsrc}></img> <p>${forecastTemp}&deg;F - ${forecastDesc}</p>`;
       weatherDiv.appendChild(forecastElement);
   

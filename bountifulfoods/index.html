@@ -29,16 +29,46 @@
                 <li><a href="/bountifulfoods/aboutus.html">About</a></li>
               </ul>
               <ul>
-                <a href="/bountifulfoods/orderdrink.html"><button class="calltoactionbutton">Order Now</button></a>              </ul>
+                <a href="/bountifulfoods/orderdrink.html"><button class="calltoactionbutton">Order Now</button></a>              
+              </ul>
             </div>
           </nav>
     </header>
 
     <main>
 
+      <h1 class="margin">Our Locations</h1>
+      <div class="locationscontainer">
+        <div class="locations card">
+          <h3>Carlsbad Flower Fields</h3>
+          <img src="images/flower-fields.webp" srcset="images/flower-fields.webp" alt="Picture of Vista">
+          <p>
+            The Carlsbad Flower Fields is one of the most visually appealing and aromatic destinations across all of Southern California. 
+            Only in operation during the spring months of March, April and May, Flower Fields is acres of the brightest and most colorful 
+            flowers you can imagine. 
+          </p>
+        </div>
+        <div class="locations card">
+
+          <h3>Carlsbad Village</h3>
+          <img src="images/CarlsbadVillage.webp" srcset="images/CarlsbadVillage.webp" alt="Picture of Vista">
+          <p>
+            Carlsbad Village is the downtown region of Carlsbad where you can find hundreds of restaurants, unique shops, and entertainment spots. 
+            It is a place you could plan your trip around. You’ll find all types of events and festivals that take place throughout the year, including farmers markets, 
+            the Taste of Carlsbad Village self-guided food tour, pet parades, movie nights, and so much more. 
+          </p>
+        </div>
+      </div>
+
+      <div class="ordercontainer card">
+        <h2>Your Total Orders:</h2>
+        <hr>
+        <div id="drinkCount"></div>
+      </div>
+
       <div class="weather">
         <h1>Current Weather</h1>
-        <div class="weatherCard">
+        <div class="card">
           <img id="weather-icon" src="#" alt="Weather Icon">
           <div>
             <span id="current-temp"></span> - <span id="describeWeather"></span>
@@ -59,9 +89,9 @@
       </div>
       <div class="column">
           <h3>Connect With Us</h3>
-          <a href="https://twitter.com/example" target="_blank">Twitter</a>
-          <a href="https://facebook.com/example" target="_blank">Facebook</a>
-          <a href="https://instagram.com/example" target="_blank">Instagram</a>
+          <p><a href="https://twitter.com/example" target="_blank">Twitter</a></p>
+          <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
+          <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
       </div>
       <div class="column">
           <h3>Contact Information</h3>
@@ -74,4 +104,5 @@
 </body>
 <script src="scripts/lastModified.js"></script>
 <script src="scripts/weather.js"></script>
+<script src="scripts/orderCounter.js"></script>
 </html>

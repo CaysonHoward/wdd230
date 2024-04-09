@@ -37,21 +37,16 @@ async function getFruit() {
 
 async function displayFruitNutrition(data) {
     const fruits = formData.getAll('fruit');
-    const response = await fetch(linksURL);
-    const fruitsData = await response.json(); // This is the full list of fruits from the JSON file
 
     fruits.forEach(selectedFruit => {
-        // Find the fruit in the fetched data
         const fruitDetails = data.find(fruit => fruit.name.toLowerCase() === selectedFruit.toLowerCase());
-        
-        // If the fruit is found in the JSON data, display its nutrition
         if (fruitDetails) {
-            calculateNutrition(fruitDetails); // Display the nutritional information
+            calculateNutrition(fruitDetails);
         } else {
         console.log(`Nutrition information for ${selectedFruit} not found.`);
         }
     });
-    displayNutrition(); // Display the nutritional information
+    displayNutrition();
 
 }
 
