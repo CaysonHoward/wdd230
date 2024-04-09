@@ -62,9 +62,11 @@ form {
 .orderconf{
   text-align: center;
 }
+
 #open-menu{
   display: none;
 }
+
 .images img{
   max-width: 100%;
 }
